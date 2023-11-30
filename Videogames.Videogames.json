@@ -1,0 +1,430 @@
+[{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d329"
+  },
+  "name": "Minecraft",
+  "genres": "Sandbox, Survival",
+  "description": "Minecraft is a game about placing blocks and going on adventures",
+  "platforms": "PC, Console, Mobile",
+  "img": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/02/guia-todos-trucos-consejos-minecraft.jpg?tf=3840x"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d32a"
+  },
+  "name": "Grand Theft Auto V",
+  "genres": "Action-adventure",
+  "description": "Grand Theft Auto V is an action-adventure game played from either a third-person or first-person perspective",
+  "platforms": "PC, Console",
+  "img": "https://cdn.vox-cdn.com/thumbor/2tunYasBlRHyxygs5li6l24VK4w=/34x0:1066x688/1200x800/filters:focal(34x0:1066x688)/cdn.vox-cdn.com/uploads/chorus_image/image/3237323/gta_5_release_date_1200.0.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d32b"
+  },
+  "name": "Fortnite",
+  "genres": "Battle royale, Survival",
+  "description": "Fortnite is a battle royale game where up to 100 players fight to be the last person standing",
+  "platforms": "PC, Console, Mobile",
+  "img": "https://cdn2.unrealengine.com/fortnite-chapter-4-og-overview-page-key-art-bg-1920x1080-1fbc3a1c0297.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d32c"
+  },
+  "name": "The Legend of Zelda: Breath of the Wild",
+  "genres": "Action-adventure",
+  "description": "The Legend of Zelda: Breath of the Wild is an action-adventure game set in an open world environment",
+  "platforms": "Console",
+  "img": "https://onlygames.com.ar/wp-content/uploads/2022/03/the-legend-of-zelda-breath-of-the-wild-switch-hero.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d32d"
+  },
+  "name": "PlayerUnknown's Battlegrounds",
+  "genres": "Battle royale",
+  "description": "PlayerUnknown's Battlegrounds is an online multiplayer battle royale game",
+  "platforms": "PC, Console, Mobile",
+  "img": "https://static.wikia.nocookie.net/playerunknowns-battlegrounds/images/6/63/PlayerUnknown%27s_Battlegrounds.jpg/revision/latest?cb=20180809141246&path-prefix=es"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d32e"
+  },
+  "name": "Overwatch",
+  "genres": "First-person shooter",
+  "description": "Overwatch is a team-based multiplayer first-person shooter game",
+  "platforms": "PC, Console",
+  "img": "https://i.blogs.es/718397/overwatch-2-pc-ps5-ps4-xbox-switch/1366_2000.jpeg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d32f"
+  },
+  "name": "Call of Duty: Modern Warfare",
+  "genres": "First-person shooter",
+  "description": "Call of Duty: Modern Warfare is a first-person shooter video game",
+  "platforms": "PC, Console",
+  "img": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/08/call-duty-modern-warfare.jpg?tf=3840x"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d330"
+  },
+  "name": "Super Mario Odyssey",
+  "genres": "Platformer",
+  "description": "Super Mario Odyssey is a platform game in which players control Mario as he travels across many different worlds",
+  "platforms": "Console",
+  "img": "https://i0.wp.com/losreyesdelmando.com/wp-content/uploads/2017/11/super-mario-odyssey-1.jpg?fit=1920%2C1080&ssl=1"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d331"
+  },
+  "name": "FIFA 20",
+  "genres": "Sports",
+  "description": "FIFA 20 is a football simulation video game",
+  "platforms": "PC, Console",
+  "img": "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2019/08/09/285dc5ad-b2b8-4add-a8f6-31e2dbe6fea7/fifa-20"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d332"
+  },
+  "name": "Assassin's Creed Odyssey",
+  "genres": "Action role-playing",
+  "description": "Assassin's Creed Odyssey is an action role-playing video game",
+  "platforms": "PC, Console",
+  "img": "https://store-images.s-microsoft.com/image/apps.53783.71972716530068101.ccdcadf1-1d2a-49f2-9c37-0b0a27e5a53c.6d60329c-2f2a-4ac9-9dd3-2f132d5c3b6c"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d333"
+  },
+  "name": "Red Dead Redemption 2",
+  "genres": "Action-adventure",
+  "description": "Red Dead Redemption 2 is a Western-themed action-adventure game",
+  "platforms": "PC, Console",
+  "img": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/10/red-dead-redemption-2_22.jpg?tf=3840x"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d334"
+  },
+  "name": "League of Legends",
+  "genres": "MOBA",
+  "description": "League of Legends is a multiplayer online battle arena video game",
+  "platforms": "PC",
+  "img": "https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-872a966297484acd0efe49f34edd5aed"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d335"
+  },
+  "name": "Madden NFL 20",
+  "genres": "Sports",
+  "description": "Madden NFL 20 is an American football video game",
+  "platforms": "PC, Console",
+  "img": "https://thebetanetwork.net/wp-content/uploads/2020/06/madden-nfl-20-key-art.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d336"
+  },
+  "name": "The Witcher 3: Wild Hunt",
+  "genres": "Action role-playing",
+  "description": "The Witcher 3: Wild Hunt is an action role-playing game",
+  "platforms": "PC, Console",
+  "img": "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d337"
+  },
+  "name": "God of War",
+  "genres": "Action-adventure",
+  "description": "God of War is an action-adventure game that follows Kratos, a Spartan warrior",
+  "platforms": "Console",
+  "img": "https://cdn.wccftech.com/wp-content/uploads/2019/02/God-of-War-Logo.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d338"
+  },
+  "name": "Counter-Strike: Global Offensive",
+  "genres": "First-person shooter",
+  "description": "Counter-Strike: Global Offensive is a multiplayer first-person shooter game",
+  "platforms": "PC",
+  "img": "https://steamcdn-a.akamaihd.net/apps/csgo/blog/images/wallpaper_nologo.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d339"
+  },
+  "name": "Super Smash Bros. Ultimate",
+  "genres": "Fighting",
+  "description": "Super Smash Bros. Ultimate is a fighting game in which players use different attacks to weaken their opponents",
+  "platforms": "Console",
+  "img": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d33a"
+  },
+  "name": "Mortal Kombat 11",
+  "genres": "Fighting",
+  "description": "Mortal Kombat 11 is a fighting game in which players engage in one-on-one combat",
+  "platforms": "PC, Console",
+  "img": "https://acdn.mitiendanube.com/stores/002/602/523/products/whatsapp-image-2022-11-04-at-12-31-591-e47a383e55384544aa16697447069335-1024-1024.jpeg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d33b"
+  },
+  "name": "Pokémon Sword and Shield",
+  "genres": "Role-playing",
+  "description": "Pokémon Sword and Shield are role-playing games in which players train and battle with various Pokémon creatures",
+  "platforms": "Console",
+  "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974724185/pokemon-sword-shield-vol-1-9781974724185_hr.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d33c"
+  },
+  "name": "Cyberpunk 2077",
+  "genres": "Action role-playing",
+  "description": "Cyberpunk 2077 is an open-world action role-playing game set in a dystopian future",
+  "platforms": "PC, Console",
+  "img": "https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/b9ea2dc46d95cf9fa3f77209e27ae7a6488368f1-1920x1080.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d33d"
+  },
+  "name": "The Elder Scrolls V: Skyrim",
+  "genres": "Action role-playing",
+  "description": "The Elder Scrolls V: Skyrim is an action role-playing game set in an open world",
+  "platforms": "PC, Console",
+  "img": "skyrim.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d33e"
+  },
+  "name": "World of Warcraft",
+  "genres": "MMORPG",
+  "description": "World of Warcraft is a massively multiplayer online role-playing game",
+  "platforms": "PC",
+  "img": "wow.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d33f"
+  },
+  "name": "Animal Crossing: New Horizons",
+  "genres": "Life simulation",
+  "description": "Animal Crossing: New Horizons is a life simulation game in which players develop a deserted island",
+  "platforms": "Console",
+  "img": "animalcrossing.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d340"
+  },
+  "name": "Tom Clancy's Rainbow Six Siege",
+  "genres": "Tactical shooter",
+  "description": "Tom Clancy's Rainbow Six Siege is a tactical shooter game in which players engage in team-based combat",
+  "platforms": "PC, Console",
+  "img": "rainbowsixsiege.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d341"
+  },
+  "name": "Apex Legends",
+  "genres": "Battle royale",
+  "description": "Apex Legends is a free-to-play battle royale game set in the Titanfall universe",
+  "platforms": "PC, Console",
+  "img": "apexlegends.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d342"
+  },
+  "name": "The Last of Us Part II",
+  "genres": "Action-adventure",
+  "description": "The Last of Us Part II is an action-adventure game set in a post-apocalyptic world",
+  "platforms": "Console",
+  "img": "thelastofus2.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d343"
+  },
+  "name": "Star Wars Jedi: Fallen Order",
+  "genres": "Action-adventure",
+  "description": "Star Wars Jedi: Fallen Order is an action-adventure game set in the Star Wars universe",
+  "platforms": "PC, Console",
+  "img": "starwars.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d344"
+  },
+  "name": "Gears 5",
+  "genres": "Third-person shooter",
+  "description": "Gears 5 is a third-person shooter game in which players control Kait Diaz as she uncovers her connection to the enemy",
+  "platforms": "PC, Console",
+  "img": "gears5.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d345"
+  },
+  "name": "NBA 2K20",
+  "genres": "Sports",
+  "description": "NBA 2K20 is a basketball simulation video game",
+  "platforms": "PC, Console",
+  "img": "nba2k20.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d346"
+  },
+  "name": "Dota 2",
+  "genres": "MOBA",
+  "description": "Dota 2 is a multiplayer online battle arena video game",
+  "platforms": "PC",
+  "img": "dota2.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d347"
+  },
+  "name": "Borderlands 3",
+  "genres": "First-person shooter",
+  "description": "Borderlands 3 is a first-person shooter game with role-playing elements",
+  "platforms": "PC, Console",
+  "img": "borderlands3.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d348"
+  },
+  "name": "Horizon Zero Dawn",
+  "genres": "Action role-playing",
+  "description": "Horizon Zero Dawn is an action role-playing game set in a post-apocalyptic world",
+  "platforms": "Console",
+  "img": "horizonzerodawn.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d349"
+  },
+  "name": "F1 2019",
+  "genres": "Racing",
+  "description": "F1 2019 is a racing video game based on the 2019 Formula One World Championship",
+  "platforms": "PC, Console",
+  "img": "f12019.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d34a"
+  },
+  "name": "Sea of Thieves",
+  "genres": "Action-adventure",
+  "description": "Sea of Thieves is an action-adventure game in which players engage in pirate activities",
+  "platforms": "PC, Console",
+  "img": "seaofthieves.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d34b"
+  },
+  "name": "Resident Evil 2",
+  "genres": "Survival horror",
+  "description": "Resident Evil 2 is a survival horror game in which players control police officer Leon S. Kennedy",
+  "platforms": "PC, Console",
+  "img": "residentevil2.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d34c"
+  },
+  "name": "Sekiro: Shadows Die Twice",
+  "genres": "Action-adventure",
+  "description": "Sekiro: Shadows Die Twice is an action-adventure game set in Sengoku-era Japan",
+  "platforms": "PC, Console",
+  "img": "sekiro.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d34d"
+  },
+  "name": "Marvel's Spider-Man",
+  "genres": "Action-adventure",
+  "description": "Marvel's Spider-Man is an action-adventure game based on the Marvel Comics superhero Spider-Man",
+  "platforms": "Console",
+  "img": "spiderman.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d34e"
+  },
+  "name": "Far Cry 5",
+  "genres": "First-person shooter",
+  "description": "Far Cry 5 is a first-person shooter game set in an open world environment",
+  "platforms": "PC, Console",
+  "img": "farcry5.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d34f"
+  },
+  "name": "Destiny 2",
+  "genres": "First-person shooter",
+  "description": "Destiny 2 is a free-to-play online multiplayer first-person shooter game",
+  "platforms": "PC, Console",
+  "img": "destiny2.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d350"
+  },
+  "name": "The Division 2",
+  "genres": "Action role-playing",
+  "description": "The Division 2 is an action role-playing game set in a post-apocalyptic Washington D.C.",
+  "platforms": "PC, Console",
+  "img": "thedivision2.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d351"
+  },
+  "name": "Forza Horizon 4",
+  "genres": "Racing",
+  "description": "Forza Horizon 4 is a racing game set in an open world environment",
+  "platforms": "PC, Console",
+  "img": "forzahorizon4.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d352"
+  },
+  "name": "Resident Evil 3",
+  "genres": "Survival horror",
+  "description": "Resident Evil 3 is a survival horror game in which players control Jill Valentine",
+  "platforms": "PC, Console",
+  "img": "residentevil3.jpg"
+},
+{
+  "_id": {
+    "$oid": "6554c9e9c4521ac253e6d353"
+  },
+  "name": "The Sims 4",
+  "genres": "Life simulation",
+  "description": "The Sims 4 is a life simulation game in which players create and control virtual people",
+  "platforms": "PC, Console",
+  "img": "sims4.jpg"
+}]

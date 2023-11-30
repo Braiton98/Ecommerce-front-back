@@ -1,0 +1,33 @@
+.loading{
+  font-size: 50px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.db{
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 1.2rem;  
+  justify-content: center;
+  align-items: center;
+}
+
+.db-container{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: .3rem;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+.db-container .db-games .db-name, 
+.db-container .db-games .db-description,
+.db-container .db-games .db-platforms{
+  color: aliceblue;
+}
+
+.db-container .db-games .db-img{
+  width: 200px;
+}

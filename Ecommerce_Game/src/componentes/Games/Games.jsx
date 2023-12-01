@@ -75,7 +75,7 @@ const Games = ({ games }) => {
                                     <h4>Genres: <samp>{game.genres.map((gen) => gen.name).join(', ')}</samp></h4>
                                 )
                             }
-                            
+
                             <div className='button'>
                                 <button><i className="bi bi-currency-dollar"></i>Buy</button>
                             </div>

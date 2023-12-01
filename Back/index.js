@@ -13,7 +13,7 @@ app.use((req, res, next)=>{
   next();
 });
 
-app.use('/api', routerGames);
+app.use('/data', routerGames);
 
 app.use(express.json());
 

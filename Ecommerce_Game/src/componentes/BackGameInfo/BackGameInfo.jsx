@@ -1,46 +1,6 @@
-// import { useEffect, useState } from 'react'
-// import './backinfo.css'
-
-// const BackGameInfo = () => {
-
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const response = await fetch('http://localhost:3008/api/games');
-//       const jsonData = await response.json();
-//       console.log(jsonData)
-//       setData(jsonData);
-//     }
-//     fetchData();
-//   }, [])
-
-//   console.log(Array.isArray(data))
-
-//   return (
-//     <>
-//       {data.length > 0 ? (
-//         data.map(({ _id, name, description, platforms, img }) => (
-//           <div className='db-container' key={_id}>
-//             <div className="db-games">
-//               <h2 className='db-name'>{name}</h2>
-//               <img src={img} alt="game" className='db-img'/>
-//               <p className='db-description'>{description}</p>
-//               <p className='db-platforms'>Plataformas: {platforms}</p>
-//             </div>
-//           </div>
-//         ))
-//       ) : (
-//         <p className='loading'>"Cargando..."</p>
-//       )}
-//     </>
-//   )
-// }
-
-// export default BackGameInfo
-
 import React, { useEffect, useState } from 'react';
 import './backinfo.css';
+import '../Games/Games.css';
 
 const BackGameInfo = () => {
   const [data, setData] = useState([]);
@@ -49,13 +9,14 @@ const BackGameInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3008/api/games');
+        const response = await fetch('http://localhost:3008/data/games');
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
-        
+
         const jsonData = await response.json();
-        console.log(jsonData);
+        console.log("Data obtenida");
+        console.log(jsonData.data);
         setData(jsonData.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -72,14 +33,14 @@ const BackGameInfo = () => {
       {loading ? (
         <p className='loading'>"Cargando..."</p>
       ) : (
-        <div className='db'>
+        <div className='games'>
           {data.map(({ _id, name, description, platforms, img }) => (
-            <div className='db-container' key={_id}>
-              <div className="db-games">
+            <div className='card' key={_id}>
+              <img src={img} alt={name} className='db-img' />
+              <div className="card-data card-back">
                 <h2 className='db-name'>{name}</h2>
-                <img src={img} alt={name} className='db-img'/>
-                <p className='db-description'>{description}</p>
-                <p className='db-platforms'>Plataformas: {platforms}</p>
+                <p className='description'>{description}</p>
+                <p>Platforms: {platforms}</p>
               </div>
             </div>
           ))}

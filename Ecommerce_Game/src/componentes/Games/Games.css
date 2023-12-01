@@ -171,6 +171,19 @@ samp {
   flex-direction: column;
 }
 
+.card-data .description::before{  
+  content: '';
+  background-color: #434343;
+  width: 280px;
+  height: 320px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+  opacity: 0.5;
+}
+
 .pages {
   display: flex;
   justify-content: center;

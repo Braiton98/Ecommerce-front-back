@@ -1,8 +1,11 @@
-const GamesModel = require('../models/game-model');
 
-class Games{
+import GamesModel from '../models/game-model.js';
+
+export default class Games{
+  
   static async getAll(req, res){
     const {data, error} = await GamesModel.getAll();
+    console.log(data)
     error ? res.status(400).json({error: 'No hay juegos.'})
           : res.status(200).json({data});
   }
@@ -49,5 +52,3 @@ class Games{
   }
   
 }
-
-module.exports = Games;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './backinfo.css';
 import '../Games/Games.css';
+import { FilterBack } from '../BackFilter/FilterBack';
 
 const BackGameInfo = () => {
   const [data, setData] = useState([]);
@@ -30,6 +31,9 @@ const BackGameInfo = () => {
 
   return (
     <>
+      <div className='filter filter-back'>
+        <FilterBack />
+      </div>
       {loading ? (
         <p className='loading'>"Cargando..."</p>
       ) : (

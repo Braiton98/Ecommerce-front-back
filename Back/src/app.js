@@ -10,6 +10,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173')
+  next()
+})
+
 app.use("/api", authRoutes)
 app.use("/api", gamesRoutes)
 

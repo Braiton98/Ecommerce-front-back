@@ -21,23 +21,22 @@ function App() {
   return (
     <>
 
-    <Router>
-      <header>
-        <Navbar />
-      </header>
+      <Router>
+        <header>
+          <Navbar />
+        </header>
 
-      <Routes>
-        <Route path="/" element={<ApiGames />} />
-        <Route path="/Developers" element={<Developers />} />
-        <Route path="/Tags" element={<Tags />} />
-        <Route path="/NotFound" element={<NotFound />} />
-        <Route path="/detailgame/:id" element={<Game />} />
-        <Route path="/Search" element={<Search />} />
-      </Routes>
-    </Router>
+        <Routes>
+          <Route path="/" element={<ApiGames />} />
+          <Route path="/MoreGames" element={<BackGameInfo />} />
+          <Route path="/Developers" element={<Developers />} />
+          <Route path="/Tags" element={<Tags />} />
+          <Route path="/NotFound" element={<NotFound />} />
+          <Route path="/detailgame/:id" element={<Game />} />
+          <Route path="/Search" element={<Search />} />
+        </Routes>
+      </Router>
 
-    <BackGameInfo />
-    
     </>
 
 

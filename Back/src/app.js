@@ -10,6 +10,10 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/', (req, res)=>{
+  res.send('<h2>Servidor corriendo</h2>');
+})
+
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173')
   next()

@@ -1,4 +1,5 @@
 import { connectToMongoDB, disconnectToMongoDB } from "../config/database.js";
+import { ObjectId } from "mongodb";
 
 export default class GamesModel {
   static async getAll() {
@@ -50,7 +51,7 @@ export default class GamesModel {
     }
   }
 
-  static async getByFirstLetter(name){
+  static async getByFirstLetter(name) {
     try {
       const clientMongo = await connectToMongoDB();
 
@@ -106,4 +107,55 @@ export default class GamesModel {
 
   }
 
+  static async update(id, body) {
+
+    try {
+      const clientMongo = await connectToMongoDB()
+      if (!clientMongo) {
+        throw Error("Error loading Mongo")
+      }
+      const update = await clientMongo.db("Videogames").collection("games").updateOne({ id: id }, { $set: body })
+      console.log(update)
+      if (update.acknowledged) {
+        return { data: update, error: null }; // Modifica según tus necesidades
+      } else {
+        return { data: null, error: "Update not acknowledged" }; // Modifica según tus necesidades
+      }
+    } catch (error) {
+      console.error("Error updating data:", error);
+      return { data: null, error: error.message }; // Modifica según tus necesidades
+    }
+  }
+
+  static async delete(id) {
+    try {
+      const gameId = Number(id);
+      if (isNaN(gameId)) {
+        throw new Error('Invalid game ID.');
+      }
+
+      const clientMongo = await connectToMongoDB();
+
+      if (!clientMongo) {
+        throw new Error("Error loading Mongo");
+      }
+
+      const result = await clientMongo.db("Videogames").collection("games").findOne({ id: Number(id) })
+      const { name } = result
+      const result2 = await clientMongo.db("Videogames").collection("games").deleteOne({ name });
+      if (result2.deletedCount === 1) {
+        console.log("Successfully deleted one document.");
+      } else {
+        console.log("No documents matched the query. Deleted 0 documents.");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }
+
+
+
+
+
+

@@ -15,7 +15,13 @@ router.get('/letter', Games.getByFirstLetter);
 
 router.get('/games/:id', Games.getByID)
 
-router.post('/games',multerInstance.single('imagenproducto'), Games.createOne)
+router.post('/games', Games.createOne)
+
+router.put('/games/:id', Games.update)
+
+router.delete('/games/:id', Games.delete)
+
+
 
 
 export default router;

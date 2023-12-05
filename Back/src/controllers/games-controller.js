@@ -45,9 +45,9 @@ export default class Games {
     }
   }
 
-  static async getByFirstLetter(req, res){
-    const {name} = req.query;
-  
+  static async getByFirstLetter(req, res) {
+    const { name } = req.query;
+
     if (!name) {
       throw new Error('El parámetro "name" es requerido.');
     }
@@ -56,9 +56,9 @@ export default class Games {
 
     name.match(reg);
 
-    const {data, error} = await GamesModel.getByFirstLetter(name);
-    error ? res.status(400).json({error: 'No se encuentra ese juego.'})
-          : res.status(200).json({data});
+    const { data, error } = await GamesModel.getByFirstLetter(name);
+    error ? res.status(400).json({ error: 'No se encuentra ese juego.' })
+      : res.status(200).json({ data });
   }
 
   static async getByID(req, res) {
@@ -72,28 +72,70 @@ export default class Games {
   }
 
   static async createOne(req, res) {
-
     try {
-      const body = req.body
+      const body = req.body;
       console.log(req.files);
+  
+      // No necesitas hacer JSON.parse(body) si ya tienes express.json() configurado
+  
       const dataToVerify = {
         ...body,
-        id:Number(body.id),
+        id: Number(body.id),
         name: String(body.name),
         genres: String(body.genres),
         description: String(body.description),
-        platforms:String(body.platforms),
-        img:String(body.img),
-
+        platforms: String(body.platforms),
+        img: String(body.img)
+      };
+  
+      // Verifica que la conversión de propiedades sea necesaria y segura
+  
+      const games = Sgames.parse(body); // Asegúrate de que Sgames esté definido y funcione correctamente
+  
+      const { data, error } = await GamesModel.createOne(games);
+      if (data) {
+        return res.status(202).json(data);
+      } else {
+        throw new Error("Error creating game"); // Proporciona un mensaje de error más detallado si no se puede crear el juego
       }
-      console.log(JSON.parse(body))
-      const games = Sgames.parse(body)
-      const { data, error } = await GamesModel.createOne(games)
-      if (data) return res.status(202).json(data)
     } catch (error) {
-      res.status(400).json({ error: "the data sent is incorrect" })
+      res.status(400).json({ error: error.message || "Unknown error occurred" });
     }
-
   }
+  
+
+  static async update(req, res) {
+    try {
+      const { id } = req.params;
+      const body = req.body;
+      console.log(body)
+      if (!id || !body) {
+        return res.status(400).json({ error: 'Bad request. Provide valid id and body.' });
+      }
+      const { data, error } = await GamesModel.update( Number(id), body);
+      if (error) {
+        console.error('Error updating data:', error);
+        return res.status(500).json({ error: 'Internal Server Error' });
+      }
+      return res.status(200).json({ success: true, data });
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
+
+static async delete(req, res) {
+  try {
+    const { id } = req.params;
+    if (!id) {
+      return res.status(400).json({ error: 'Bad request.' });
+    }
+    const result= await GamesModel.delete(Number(id));
+    return res.status(200).json({ message: 'Successfully deleted the game.', result });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: 'Internal server error.' });
+  }
+}
 
 }

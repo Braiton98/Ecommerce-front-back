@@ -1,11 +1,12 @@
-/* body {
+.log-container,
+.reg-container {
     display: flex;
     justify-content: center;
-    padding: 2rem;
-} */
+    margin-top: 30px;
+}
 
-
-.login, .register{
+.login,
+.register {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -14,21 +15,20 @@
     background-image: url(./proy.jpg);
     text-align: center;
     width: 500px;
-    
 }
 
-/* h1{
+h1 {
     font-size: 2rem;
     color: aliceblue;
     font-weight: bold;
 
 }
 
-h2{
+h2 {
     color: #7fffd4;
     text-align: center;
     margin: 10px;
-} */
+}
 
 .form_auth {
     display: flex;
@@ -42,15 +42,15 @@ input {
     outline: none;
     padding: 0.8rem;
     border-bottom: 1px solid #51e2e9;
-   
-    
-    &::placeholder{
+
+
+    &::placeholder {
         color: #272626;
     }
 }
 
-/* 
-button{ 
+
+/* button{ 
         height: 16%;
         font-size: 1rem;
         font-weight: 400;
@@ -65,12 +65,12 @@ button{
             color: rgb(255, 242, 242);
             background-color: rgb(27, 29, 31);
         }
-    }
+    } */
 
 
-p a{
+p a {
     margin-top: 1rem;
     font-size: 0.8rem;
     color: #7fffd4;
 
-} */
+}

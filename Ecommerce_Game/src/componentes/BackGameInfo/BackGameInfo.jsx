@@ -9,7 +9,7 @@ const BackGameInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3008/data/games');
+        const response = await fetch('http://localhost:3008/api/games');
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }

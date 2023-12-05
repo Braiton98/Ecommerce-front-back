@@ -37,6 +37,21 @@ input {
   justify-content: space-around;
 }
 
+.card::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 320px;
+  background-color: #434343;
+  border-radius: 20px;
+  transition: all .3s;
+  opacity: .7;
+}
+
+.card:hover::before{
+  width: 280px;
+}
+
 
 .card img {
   max-width: 100%;

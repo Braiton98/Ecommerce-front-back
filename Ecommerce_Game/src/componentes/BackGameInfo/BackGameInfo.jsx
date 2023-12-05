@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './backinfo.css';
 import '../Games/Games.css';
+import { FilterBack } from '../BackFilter/FilterBack';
 
 const BackGameInfo = () => {
   const [data, setData] = useState([]);
@@ -33,18 +34,23 @@ const BackGameInfo = () => {
       {loading ? (
         <p className='loading'>"Cargando..."</p>
       ) : (
-        <div className='games'>
-          {data.map(({ _id, name, description, platforms, img }) => (
-            <div className='card' key={_id}>
-              <img src={img} alt={name} className='db-img' />
-              <div className="card-data card-back">
-                <h2 className='db-name'>{name}</h2>
-                <p className='description'>{description}</p>
-                <p>Platforms: {platforms}</p>
+        <>
+          <div className='filter filter-back'>
+            <FilterBack />
+          </div>
+          <div className='games'>
+            {data.map(({ _id, name, description, platforms, img }) => (
+              <div className='card' key={_id}>
+                <img src={img} alt={name} className='db-img' />
+                <div className="card-data card-back">
+                  <h2 className='db-name'>{name}</h2>
+                  <p className='description'>{description}</p>
+                  <p>Platforms: {platforms}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </>
       )}
     </>
   );

@@ -1,0 +1,22 @@
+.filter.filter-back{
+  display: flex;
+  width: fit-content;
+  gap: 5px;
+  align-items: center;
+}
+
+p{
+  color: aliceblue;
+}
+
+button{
+  border: none;
+  background: #000;
+  color: aliceblue;
+  border-radius: 5px;
+  height: 30px;
+}
+
+button:hover{
+  cursor: pointer;
+}

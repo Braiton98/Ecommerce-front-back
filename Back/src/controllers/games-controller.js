@@ -24,14 +24,6 @@ export default class Games {
       : res.status(200).json({ data });
   }
 
-  // static async getByPlatform(req, res){
-  //   const { platforms } = req.query;
-
-  //   const {data, error} = await GamesModel.getByPlatform(platforms);
-  //   error ? res.status(400).json({error: 'No se encuentra esa plataforma.'})
-  //         : res.status(200).json({data});
-  // }
-
   static async getByPlatform(req, res) {
     try {
       const { platforms } = req.query;
@@ -51,6 +43,22 @@ export default class Games {
     } catch (error) {
       res.status(500).json({ error: error.message || 'Error desconocido' });
     }
+  }
+
+  static async getByFirstLetter(req, res){
+    const {name} = req.query;
+  
+    if (!name) {
+      throw new Error('El parámetro "name" es requerido.');
+    }
+
+    const reg = new RegExp(`^${name}`, 'i');
+
+    name.match(reg);
+
+    const {data, error} = await GamesModel.getByFirstLetter(name);
+    error ? res.status(400).json({error: 'No se encuentra ese juego.'})
+          : res.status(200).json({data});
   }
 
   static async getByID(req, res) {

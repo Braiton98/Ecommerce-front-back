@@ -25,7 +25,7 @@
   "name": "Fortnite",
   "genres": "Battle royale, Survival",
   "description": "Fortnite is a battle royale game where up to 100 players fight to be the last person standing",
-  "platforms": "PC, Console, Mobile",
+  "platforms": "PC, console, Mobile",
   "img": "https://cdn2.unrealengine.com/fortnite-chapter-4-og-overview-page-key-art-bg-1920x1080-1fbc3a1c0297.jpg"
 },
 {
@@ -46,7 +46,7 @@
   "genres": "Battle royale",
   "description": "PlayerUnknown's Battlegrounds is an online multiplayer battle royale game",
   "platforms": "PC, Console, Mobile",
-  "img": "https://static.wikia.nocookie.net/playerunknowns-battlegrounds/images/6/63/PlayerUnknown%27s_Battlegrounds.jpg/revision/latest?cb=20180809141246&path-prefix=es"
+  "img": "https://wstatic-prod.pubg.com/web/live/static/og/img-og-pubg.jpg"
 },
 {
   "_id": {
@@ -206,7 +206,7 @@
   "genres": "Action role-playing",
   "description": "The Elder Scrolls V: Skyrim is an action role-playing game set in an open world",
   "platforms": "PC, Console",
-  "img": "skyrim.jpg"
+  "img": "https://www.1min30.com/wp-content/uploads/2018/10/logo-Skyrim.jpg"
 },
 {
   "_id": {
@@ -216,7 +216,7 @@
   "genres": "MMORPG",
   "description": "World of Warcraft is a massively multiplayer online role-playing game",
   "platforms": "PC",
-  "img": "wow.jpg"
+  "img": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/04/world-warcraft.jpg?tf=3840x"
 },
 {
   "_id": {
@@ -226,7 +226,7 @@
   "genres": "Life simulation",
   "description": "Animal Crossing: New Horizons is a life simulation game in which players develop a deserted island",
   "platforms": "Console",
-  "img": "animalcrossing.jpg"
+  "img": "https://http2.mlstatic.com/D_NQ_NP_607243-MLA69426637375_052023-O.webp"
 },
 {
   "_id": {
@@ -236,7 +236,7 @@
   "genres": "Tactical shooter",
   "description": "Tom Clancy's Rainbow Six Siege is a tactical shooter game in which players engage in team-based combat",
   "platforms": "PC, Console",
-  "img": "rainbowsixsiege.jpg"
+  "img": "https://irrompibles.net/irrwp/wp-content/uploads/2016/01/images_2016_Reviews_R6S_R6S_thumb.jpg"
 },
 {
   "_id": {
@@ -246,7 +246,7 @@
   "genres": "Battle royale",
   "description": "Apex Legends is a free-to-play battle royale game set in the Titanfall universe",
   "platforms": "PC, Console",
-  "img": "apexlegends.jpg"
+  "img": "https://i.blogs.es/3c4365/portada-mejores-personajes-apex-legends/1366_2000.jpeg"
 },
 {
   "_id": {
@@ -256,7 +256,7 @@
   "genres": "Action-adventure",
   "description": "The Last of Us Part II is an action-adventure game set in a post-apocalyptic world",
   "platforms": "Console",
-  "img": "thelastofus2.jpg"
+  "img": "https://live.mrf.io/statics/i/ps/www.muycomputer.com/wp-content/uploads/2019/09/TheLastOfUsPartII.jpg?width=1200&enable=upscale"
 },
 {
   "_id": {
@@ -266,7 +266,7 @@
   "genres": "Action-adventure",
   "description": "Star Wars Jedi: Fallen Order is an action-adventure game set in the Star Wars universe",
   "platforms": "PC, Console",
-  "img": "starwars.jpg"
+  "img": "https://i.blogs.es/1b6250/jedi-fallen-order-key-art-tall/1366_2000.jpg"
 },
 {
   "_id": {
@@ -276,7 +276,7 @@
   "genres": "Third-person shooter",
   "description": "Gears 5 is a third-person shooter game in which players control Kait Diaz as she uncovers her connection to the enemy",
   "platforms": "PC, Console",
-  "img": "gears5.jpg"
+  "img": "https://i.blogs.es/441680/gears_5/1366_2000.jpeg"
 },
 {
   "_id": {
@@ -286,7 +286,7 @@
   "genres": "Sports",
   "description": "NBA 2K20 is a basketball simulation video game",
   "platforms": "PC, Console",
-  "img": "nba2k20.jpg"
+  "img": "https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/09/01/5fa539a52d210.jpeg"
 },
 {
   "_id": {
@@ -296,7 +296,7 @@
   "genres": "MOBA",
   "description": "Dota 2 is a multiplayer online battle arena video game",
   "platforms": "PC",
-  "img": "dota2.jpg"
+  "img": "https://www.mundodeportivo.com/alfabeta/hero/2021/12/dota-2.jpg?width=1200"
 },
 {
   "_id": {
@@ -306,7 +306,7 @@
   "genres": "First-person shooter",
   "description": "Borderlands 3 is a first-person shooter game with role-playing elements",
   "platforms": "PC, Console",
-  "img": "borderlands3.jpg"
+  "img": "https://cdn1.epicgames.com/catnip/offer/BL3Wide_2560x1440-2560x1440-462318f36bee20de4412e111ef72dc62.jpg"
 },
 {
   "_id": {
@@ -316,7 +316,7 @@
   "genres": "Action role-playing",
   "description": "Horizon Zero Dawn is an action role-playing game set in a post-apocalyptic world",
   "platforms": "Console",
-  "img": "horizonzerodawn.jpg"
+  "img": "https://cdn1.epicgames.com/3328b08ac1c14540aa265a1a85c07839/offer/hzd_wide-2560x1440-bd312be05c49cf339097777c493cb899.jpg"
 },
 {
   "_id": {
@@ -326,7 +326,7 @@
   "genres": "Racing",
   "description": "F1 2019 is a racing video game based on the 2019 Formula One World Championship",
   "platforms": "PC, Console",
-  "img": "f12019.jpg"
+  "img": "https://media.vandal.net/m/6-2019/201962113522814_1.jpg"
 },
 {
   "_id": {
@@ -336,7 +336,7 @@
   "genres": "Action-adventure",
   "description": "Sea of Thieves is an action-adventure game in which players engage in pirate activities",
   "platforms": "PC, Console",
-  "img": "seaofthieves.jpg"
+  "img": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172620/capsule_616x353.jpg?t=1701264099"
 },
 {
   "_id": {
@@ -346,7 +346,7 @@
   "genres": "Survival horror",
   "description": "Resident Evil 2 is a survival horror game in which players control police officer Leon S. Kennedy",
   "platforms": "PC, Console",
-  "img": "residentevil2.jpg"
+  "img": "https://rggames.com.br/wp-content/uploads/2019/01/verdadeiro-final-de-resident-evil-2-remake.jpg"
 },
 {
   "_id": {
@@ -356,7 +356,7 @@
   "genres": "Action-adventure",
   "description": "Sekiro: Shadows Die Twice is an action-adventure game set in Sengoku-era Japan",
   "platforms": "PC, Console",
-  "img": "sekiro.jpg"
+  "img": "https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267"
 },
 {
   "_id": {
@@ -366,7 +366,7 @@
   "genres": "Action-adventure",
   "description": "Marvel's Spider-Man is an action-adventure game based on the Marvel Comics superhero Spider-Man",
   "platforms": "Console",
-  "img": "spiderman.jpg"
+  "img": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2023/10/spider-man-2-portada-scaled.jpg?fit=1200%2C709&quality=50&strip=all&ssl=1"
 },
 {
   "_id": {
@@ -376,7 +376,7 @@
   "genres": "First-person shooter",
   "description": "Far Cry 5 is a first-person shooter game set in an open world environment",
   "platforms": "PC, Console",
-  "img": "farcry5.jpg"
+  "img": "https://i.blogs.es/3bec51/far-cry-r-5_20180320221123/1366_2000.jpg"
 },
 {
   "_id": {
@@ -386,7 +386,7 @@
   "genres": "First-person shooter",
   "description": "Destiny 2 is a free-to-play online multiplayer first-person shooter game",
   "platforms": "PC, Console",
-  "img": "destiny2.jpg"
+  "img": "https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2_Bungie_S1_2560x1440-d91ec3c799ec514732341a13ba0c030c?h=270&quality=medium&resize=1&w=480"
 },
 {
   "_id": {
@@ -396,7 +396,7 @@
   "genres": "Action role-playing",
   "description": "The Division 2 is an action role-playing game set in a post-apocalyptic Washington D.C.",
   "platforms": "PC, Console",
-  "img": "thedivision2.jpg"
+  "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3FYr0BWQBNMOtsszigyDo4/b059325673b4a0d2809eae94c9b74053/tctd2-meta_images_default-960x540.jpg"
 },
 {
   "_id": {
@@ -406,7 +406,7 @@
   "genres": "Racing",
   "description": "Forza Horizon 4 is a racing game set in an open world environment",
   "platforms": "PC, Console",
-  "img": "forzahorizon4.jpg"
+  "img": "https://generacionxbox.com/wp-content/uploads/2018/07/Forza-Horizon-4-wall2-generacion-xbox.jpg"
 },
 {
   "_id": {
@@ -416,7 +416,7 @@
   "genres": "Survival horror",
   "description": "Resident Evil 3 is a survival horror game in which players control Jill Valentine",
   "platforms": "PC, Console",
-  "img": "residentevil3.jpg"
+  "img": "https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/12/03/5fa534dfdc573.png"
 },
 {
   "_id": {
@@ -426,5 +426,5 @@
   "genres": "Life simulation",
   "description": "The Sims 4 is a life simulation game in which players create and control virtual people",
   "platforms": "PC, Console",
-  "img": "sims4.jpg"
+  "img": "https://www.cronista.com/files/image/483/483437/634ffcab69a16.png"
 }]

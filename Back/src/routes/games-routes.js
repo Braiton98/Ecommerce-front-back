@@ -9,7 +9,9 @@ router.get('/games', Games.getAll);
 
 router.get('/game', Games.getByName);
 
-router.get('/platform', Games.getByPlatform)
+router.get('/platform', Games.getByPlatform);
+
+router.get('/letter', Games.getByFirstLetter);
 
 router.get('/games/:id', Games.getByID)
 

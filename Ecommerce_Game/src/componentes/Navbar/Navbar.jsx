@@ -36,6 +36,7 @@ function Navbar() {
                     <li><Link to='/Tags'>Tags</Link></li>
                     <li><Link to='/Developers'>Developers</Link></li>
                     <li><Link to='/'>Games</Link></li>
+                    <li><Link to={'/MoreGames'}>More Games</Link></li>
                 </ul>
 
                 <SearchTool Write={Write} Search={Search}/>

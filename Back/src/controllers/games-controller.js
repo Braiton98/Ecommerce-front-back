@@ -75,28 +75,26 @@ export default class Games {
     try {
       const body = req.body;
       console.log(req.files);
-  
-      // No necesitas hacer JSON.parse(body) si ya tienes express.json() configurado
-  
       const dataToVerify = {
         ...body,
-        id: Number(body.id),
+        
         name: String(body.name),
         genres: String(body.genres),
         description: String(body.description),
         platforms: String(body.platforms),
-        img: String(body.img)
+        img: String(body.img),
+        id: Number(body.id)
       };
   
-      // Verifica que la conversión de propiedades sea necesaria y segura
+
   
-      const games = Sgames.parse(body); // Asegúrate de que Sgames esté definido y funcione correctamente
+      const games = Sgames.parse(body); 
   
       const { data, error } = await GamesModel.createOne(games);
       if (data) {
-        return res.status(202).json(data);
+        return res.status(200).json(data);
       } else {
-        throw new Error("Error creating game"); // Proporciona un mensaje de error más detallado si no se puede crear el juego
+        throw new Error("Error creating game"); 
       }
     } catch (error) {
       res.status(400).json({ error: error.message || "Unknown error occurred" });

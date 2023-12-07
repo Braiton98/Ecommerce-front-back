@@ -104,7 +104,6 @@ export default class GamesModel {
     } catch (error) {
       return { data: null, error: true }
     }
-
   }
 
   static async update(id, body) {

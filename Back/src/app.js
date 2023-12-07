@@ -13,12 +13,15 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('static'));
-app.use(express.static(join(__dirname, 'static'))); // Usa join para concatenar rutas
+app.use(express.static(join(__dirname, 'static'))); 
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
-});
+  });
+  
 
 app.get('/', (req, res) => {
     res.send('<h2>Servidor corriendo</h2>');

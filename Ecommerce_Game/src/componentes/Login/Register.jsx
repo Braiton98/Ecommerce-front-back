@@ -1,29 +1,62 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Login.css'
+import { useNavigate } from 'react-router-dom';
 
 
 function Register() {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(email, username, password);
+
+    const data = {
+      email, password, username
+    }
+
+    console.log(data);
+
+    try {
+      const response = await fetch('http://localhost:3008/api/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, username, password }),
+      });
+
+      if (response.ok) {
+        navigate('/games');
+        console.log(email, username, password);
+      } else {
+        const errorData = await response.json();
+        setError(errorData.message);
+        console.log(email, username, password);
+      }
+    } catch (error) {
+      setError('An error occurred during login. Please try again later.');
+      console.log(email, username, password);
+    }
   }
+
+  
 
   return (
     <div className="reg-container">
       <div className='register'>
         <h1>Create user</h1>
         <h2>Register</h2>
-        <form className='form_auth' onSubmit={handleSubmit}>
+        <form className='form_auth' onSubmit={handleSubmit} action='/'>
 
           <input
-            placeholder='name'
+            placeholder='username'
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
 
           <input
@@ -46,7 +79,7 @@ function Register() {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <button onClick={() => window.location.href = "/games"}>create user</button>
+          <button type="submit" >create user</button>
         </form>
       </div>
     </div>

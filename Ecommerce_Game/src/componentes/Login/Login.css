@@ -1,8 +1,27 @@
+
+.body-image {
+    position: relative;
+}
+.body-image::after {
+    content: '';
+    display: block;
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    opacity: 0.5;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 .log-container,
 .reg-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    padding: 5rem;
+    position: relative; 
 }
 
 .login,
@@ -12,10 +31,12 @@
     padding: 2rem;
     border-radius: 2rem;
     height: auto;
-    background-image: url(./proy.jpg);
+    /* background-image: url(./proy.jpg); */
     text-align: center;
     width: 500px;
 }
+
+
 
 h1 {
     font-size: 2rem;
@@ -50,7 +71,7 @@ input {
 }
 
 
-/* button{ 
+/* button { 
         height: 16%;
         font-size: 1rem;
         font-weight: 400;

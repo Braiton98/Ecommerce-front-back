@@ -29,12 +29,12 @@ Este proyecto es un sistema de E-commerce desarrollado para la venta de videojue
 2. Ingresa al directorio del proyecto: `cd tu-proyecto`
 3. Instala las dependencias: `npm install`
 4. Configura la base de datos MongoDB con las credenciales y la URL de conexión necesarias.
-5. Ejecuta la aplicación: `npm start`
 
 ## Colaboradores
 
 - Brian Cáceres
 - Candela Fernández
+- Nazarena Lizardo
 
 ## Proyecto Integrador UTN + Fundación Empujar
 

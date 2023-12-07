@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 
 function FormUpdate({ name: initialName, genres: initialGenres, description: initialDescription, platforms: initialPlatforms, img: initialImg, id: initialId }) {
     const [firstName, setFirstName] = useState(initialName);
@@ -9,25 +9,35 @@ function FormUpdate({ name: initialName, genres: initialGenres, description: ini
     const [platforms, setPlatforms] = useState(initialPlatforms);
     const [img, setImg] = useState(initialImg);
     const [gettedId, setId] = useState(initialId);
+    const { id } = useParams();
+
     const navigate = useNavigate();
+    const location = useLocation();
+    const gameData = location.state;
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const response = await getGames(gettedId);
-                const data = response.data; // Obtener datos del juego
+          try {
+            if(gameData){
+                const response = await getGames(id);
+                const data = response.data.data;
+                console.log('Datos obtenidos:', data);
                 setFirstName(data.name);
                 setGenres(data.genres);
                 setDescription(data.description);
                 setPlatforms(data.platforms);
                 setImg(data.img);
-            } catch (error) {
-                console.error("Error fetching data:", error.message);
+                setId(data.id)
             }
+          } catch (error) {
+            console.error('Error al obtener datos:', error.message);
+          }
         };
-
+    
+        console.log('Obteniendo datos para id:', id);
         fetchData();
-    }, [gettedId]);
+      }, [id]);
+    
 
     const handleFirstNameChange = (e) => {
         setFirstName(e.target.value);

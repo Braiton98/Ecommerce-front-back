@@ -37,7 +37,7 @@ function App() {
         <Route path="/Search" element={<Search />} />
         <Route path="/MoreGames" element={<BackGameInfo />} />
         <Route path="/MoreGames/create" element={<FormCreate />} />
-        <Route path='/MoreGames/update' element={< FormUpdate />} />
+        <Route path="/MoreGames/update/:id" element={<FormUpdate />} />
       </Routes>
     </Router>
 

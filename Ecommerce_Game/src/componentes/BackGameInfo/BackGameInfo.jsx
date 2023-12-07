@@ -1,5 +1,3 @@
-// En tu componente principal (BackGameInfo.js)
-
 import React, { useEffect, useState } from 'react';
 import './backinfo.css';
 import '../Games/Games.css';
@@ -72,9 +70,8 @@ const BackGameInfo = () => {
                     </p>
                     <p>Platforms: {platforms}</p>
                     <div className='cruds'>
-                      <EditGame />
-                      <DeleteG idb={id} onDelete={handleGameDeleted} />
-                      <FormUpdate id ={id} name={name} description={description} platforms={platforms} img={img} genres={genres} /> 
+                      <EditGame id ={id} name={name} description={description} platforms={platforms} img={img} genres={genres}  />
+                      <DeleteG idb={id} onDelete={handleGameDeleted} /> 
                     </div>
                   </div>
                 </div>

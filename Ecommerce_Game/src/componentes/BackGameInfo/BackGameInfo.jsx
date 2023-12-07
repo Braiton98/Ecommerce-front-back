@@ -7,6 +7,7 @@ import FilterBack from '../BackFilter/FilterBack';
 import { NewGame } from '../NewGame/NewGame';
 import { DeleteG } from '../CRUD/delete';
 import EditGame from '../EditGame/EditGame';
+import FormUpdate from '../CRUD/update';
 
 const BackGameInfo = () => {
   const [data, setData] = useState([]);
@@ -45,7 +46,6 @@ const BackGameInfo = () => {
   };
 
   const handleGameDeleted = () => {
-    // Esta función se usará para actualizar el estado después de eliminar un juego
     fetchData(selectedLetter);
   };
 
@@ -61,7 +61,7 @@ const BackGameInfo = () => {
           <NewGame />
           <div className='games'>
             {data.length > 0 ? (
-              data.map(({ _id, name, description, platforms, img, id }) => (
+              data.map(({ _id, name, description, platforms, img, id, genres }) => (
                 <div className='card' key={_id}>
                   <img src={img} alt={name} className='db-img' />
                   <div className="card-data card-back">
@@ -74,6 +74,7 @@ const BackGameInfo = () => {
                     <div className='cruds'>
                       <EditGame />
                       <DeleteG idb={id} onDelete={handleGameDeleted} />
+                      <FormUpdate id ={id} name={name} description={description} platforms={platforms} img={img} genres={genres} /> 
                     </div>
                   </div>
                 </div>

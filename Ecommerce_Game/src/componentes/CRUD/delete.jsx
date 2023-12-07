@@ -1,6 +1,5 @@
-// En tu componente DeleteG.js
+/* eslint-disable react/prop-types */
 
-import React from 'react';
 
 export const DeleteG = ({ idb, onDelete }) => {
   const deleteGame = async () => {
@@ -12,7 +11,7 @@ export const DeleteG = ({ idb, onDelete }) => {
       if (response.ok) {
         console.log('Game deleted successfully');
         
-        // Llama a la función de actualización de estado del componente principal
+        
         onDelete();
 
       } else {

@@ -1,18 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+function FormUpdate({ name: initialName, genres: initialGenres, description: initialDescription, platforms: initialPlatforms, img: initialImg, id: initialId }) {
+    const [firstName, setFirstName] = useState(initialName);
+    const [genres, setGenres] = useState(initialGenres);
+    const [description, setDescription] = useState(initialDescription);
+    const [platforms, setPlatforms] = useState(initialPlatforms);
+    const [img, setImg] = useState(initialImg);
+    const [gettedId, setId] = useState(initialId);
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await getGames(gettedId);
+                const data = response.data; // Obtener datos del juego
+                setFirstName(data.name);
+                setGenres(data.genres);
+                setDescription(data.description);
+                setPlatforms(data.platforms);
+                setImg(data.img);
+            } catch (error) {
+                console.error("Error fetching data:", error.message);
+            }
+        };
 
-function FormUpdate({ name, genres, description, platforms, img, id }) {
-
-    const [firstName, setFirstName] = useState(name);
-    const [gettedGenres, setGenres] = useState(genres);
-    const [gettedDescription, setDescription] = useState(description);
-    const [gettedPlatforms, setPlatforms] = useState(platforms);
-    const [gettedImg, setImg] = useState(img);
-    const [gettedId, setId] = useState(id);
-    const navigate = useNavigate()
+        fetchData();
+    }, [gettedId]);
 
     const handleFirstNameChange = (e) => {
         setFirstName(e.target.value);
@@ -38,60 +53,58 @@ function FormUpdate({ name, genres, description, platforms, img, id }) {
         setImg(e.target.value);
     };
 
-
     const dataCatch = async () => {
         try {
-            if (
-                description !== "description" &&
-                platforms !== "platforms" &&
-                img !== "Image link" &&
-                firstName !== "name" &&
-                id < 100
-            ) {
-                const data = {
-                    name: firstName,
-                    genres: gettedGenres,
-                    description: gettedDescription,
-                    platforms: gettedPlatforms,
-                    img: gettedImg,
-                    id: Number(gettedId),
-                };
+            const data = {
+                name: firstName,
+                genres: genres,
+                description: description,
+                platforms: platforms,
+                img: img,
+                id: Number(gettedId),
+            };
 
-                const jsonData = JSON.stringify(data);
-                console.log(jsonData);
+            await postData(data);
+            navigate("/MoreGames");
+        } catch (error) {
+            console.error("Error during request:", error.message);
+        }
+    };
 
-                await postData(data);
-                setFirstName("");
-                setGenres("");
-                setDescription("");
-                setPlatforms("");
-                setImg("");
-                setId("");
-                navigate("/MoreGames");
+    const getGames = async (gettedId) => {
+        try {
+            const response = await axios({
+                url: `http://localhost:3008/api/games/${gettedId}`,
+                method: "GET",
+            });
+
+            if (response.status === 200) {
+                return response;
             } else {
-                alert("The video game cannot be loaded. Incorrect information or IDs greater than or equal to 100.");
+                console.error("Error in response:", response.status, response.statusText);
             }
         } catch (error) {
             console.error("Error during request:", error.message);
+            throw error;
         }
     };
 
     const postData = async (fdata) => {
         try {
             const response = await axios({
-                url: `http://localhost:3008/api/games/${id}`,
+                url: `http://localhost:3008/api/games/${gettedId}`,
                 method: "PUT",
                 data: fdata,
             });
 
             if (response.status === 200) {
-                console.log("Successful POST request!");
+                console.log("Successful PUT request!");
             } else {
                 console.error("Error in response:", response.status, response.statusText);
             }
         } catch (error) {
             console.error("Error during request:", error.message);
-            throw error; 
+            throw error;
         }
     };
 
@@ -135,7 +148,7 @@ function FormUpdate({ name, genres, description, platforms, img, id }) {
             <input
                 type="number"
                 required
-                value={id}
+                value={gettedId}
                 placeholder="id"
                 onChange={handleIdChange}
             />
@@ -147,3 +160,4 @@ function FormUpdate({ name, genres, description, platforms, img, id }) {
 }
 
 export default FormUpdate;
+

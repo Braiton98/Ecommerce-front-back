@@ -9,3 +9,25 @@
   flex-direction: column;
   align-items: center;
 }
+
+.cruds{
+  display: flex;
+  width: 58px;
+  justify-content: space-between;
+}
+
+.bi-trash{
+  font-size: 20px;
+}
+
+.bi-trash:hover{
+  cursor: pointer;
+}
+
+.bi-pencil-square{
+  font-size: 20px;
+}
+
+.bi-pencil-square:hover{
+  cursor: pointer;
+}

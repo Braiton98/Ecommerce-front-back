@@ -1,10 +1,15 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+import { MongoClient } from 'mongodb';
 
-const { MongoClient } = require('mongodb');
+dotenv.config();
 
-const client = new MongoClient(process.env.MONGO_URL);
+const MONGO_URL = process.env.MONGO_URL
 
-async function connectToMongoDB(){
+const client = new MongoClient(MONGO_URL);
+
+
+
+export const  connectToMongoDB = async() => {
   try {
     await client.connect();
     console.log("Conectado a MongoDB.");
@@ -15,7 +20,7 @@ async function connectToMongoDB(){
   }
 };
 
-async function disconnectToMongoDB(){
+export const disconnectToMongoDB= async() =>{
   try {
     await client.close();
     console.log("Desconectado de MongoDB.");
@@ -24,4 +29,3 @@ async function disconnectToMongoDB(){
   }
 };
 
-module.exports = {connectToMongoDB, disconnectToMongoDB};

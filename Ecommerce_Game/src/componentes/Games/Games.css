@@ -37,6 +37,33 @@ input {
   justify-content: space-around;
 }
 
+.card::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 320px;
+  background-color: #434343;
+  border-radius: 20px;
+  transition: all .3s;
+  opacity: .7;
+}
+
+.card:hover::before{
+  width: 280px;
+}
+
+.card::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  width: 0;
+  height: 320px;
+  background-color: #434343;
+  border-radius: 20px;
+  transition: all .3s;
+  opacity: .7;
+}
+
 
 .card img {
   max-width: 100%;
@@ -44,8 +71,6 @@ input {
   min-height: 100%;
   height: 150px;
   border-radius: 20px;
-  filter: blur(1px);
-  opacity: 0.5;
 }
 
 .card-data {

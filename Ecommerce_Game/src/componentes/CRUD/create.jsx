@@ -1,13 +1,14 @@
-import  { useState } from "react";
+import { useState } from "react";
 import axios from 'axios'
+import { Link } from "react-router-dom";
 
 function FormCreate() {
-  const [firstName, setFirstName] = useState("name");
-  const [genres, setGenres] = useState("genre");
-  const [description, setDescription] = useState("description");
-  const [platforms, setPlatforms] = useState("platforms");
-  const [img, setImg] = useState("Image link");
-  const [id, setId] = useState(0);
+  const [firstName, setFirstName] = useState("");
+  const [genres, setGenres] = useState("");
+  const [description, setDescription] = useState("");
+  const [platforms, setPlatforms] = useState("");
+  const [img, setImg] = useState("");
+  const [id, setId] = useState("");
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -40,7 +41,7 @@ function FormCreate() {
       img !== "Image link" &&
       firstName !== "name" &&
       id <= 100
-    ){
+    ) {
       const data = {
         name: firstName,
         genres: genres,
@@ -51,12 +52,18 @@ function FormCreate() {
       };
       const jsonData = JSON.stringify(data)
       console.log(jsonData)
-      postData(data)
-    }else{
+      setFirstName("");
+      setGenres("");
+      setDescription("");
+      setPlatforms("");
+      setImg("");
+      setId("");
+      
+      postData(data);
+    } else {
       alert("The video game cannot be loaded. Incorrect information or IDs greater than 100.")
     }
   }
-
 
   const postData = async (fdata) => {
     try {
@@ -65,7 +72,7 @@ function FormCreate() {
         method: "POST",
         data: fdata
       });
-  
+
       if (response.status === 200) {
         console.log("¡Solicitud POST exitosa!");
       } else {
@@ -77,7 +84,7 @@ function FormCreate() {
       console.error("Error durante la solicitud:", error);
     }
   };
-  
+
 
 
   return (
@@ -86,30 +93,44 @@ function FormCreate() {
         type="text"
         value={firstName}
         onChange={handleFirstNameChange}
+        placeholder="name"
         required
       />
-      <input type="text" value={genres} onChange={handleGenresChange} required />
+      <input
+        type="text"
+        value={genres}
+        onChange={handleGenresChange}
+        placeholder="genres"
+        required />
       <input
         type="text"
         value={description}
         onChange={handleDescriptionChange}
+        placeholder="description"
         required
       />
       <input
         type="text"
         value={platforms}
         onChange={handlePlatformsChange}
+        placeholder="platforms"
         required
       />
-      <input type="url" value={img} onChange={handleImgChange} required />
+      <input
+        type="url"
+        value={img}
+        onChange={handleImgChange}
+        placeholder="url image"
+        required />
       <input
         type="number"
         required
         value={id}
+        placeholder="id"
         onChange={handleIdChange}
       />
       <button type="button" onClick={dataCatch}>
-        Submit
+      <Link to={'/MoreGames'}>Submit</Link>
       </button>
     </form>
   );

@@ -1,7 +1,12 @@
+// En tu componente principal (BackGameInfo.js)
+
 import React, { useEffect, useState } from 'react';
 import './backinfo.css';
 import '../Games/Games.css';
 import FilterBack from '../BackFilter/FilterBack';
+import { NewGame } from '../NewGame/NewGame';
+import { DeleteG } from '../CRUD/delete';
+import EditGame from '../EditGame/EditGame';
 
 const BackGameInfo = () => {
   const [data, setData] = useState([]);
@@ -39,6 +44,11 @@ const BackGameInfo = () => {
     setSelectedLetter(letter);
   };
 
+  const handleGameDeleted = () => {
+    // Esta función se usará para actualizar el estado después de eliminar un juego
+    fetchData(selectedLetter);
+  };
+
   return (
     <>
       {loading ? (
@@ -48,9 +58,10 @@ const BackGameInfo = () => {
           <div className='filter filter-back'>
             <FilterBack onSelect={handleLetterSelect} />
           </div>
+          <NewGame />
           <div className='games'>
             {data.length > 0 ? (
-              data.map(({ _id, name, description, platforms, img }) => (
+              data.map(({ _id, name, description, platforms, img, id }) => (
                 <div className='card' key={_id}>
                   <img src={img} alt={name} className='db-img' />
                   <div className="card-data card-back">
@@ -60,6 +71,10 @@ const BackGameInfo = () => {
                       {description.length > maxLength && '...'}
                     </p>
                     <p>Platforms: {platforms}</p>
+                    <div className='cruds'>
+                      <EditGame />
+                      <DeleteG idb={id} onDelete={handleGameDeleted} />
+                    </div>
                   </div>
                 </div>
               ))

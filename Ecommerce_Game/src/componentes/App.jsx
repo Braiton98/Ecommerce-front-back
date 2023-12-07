@@ -11,6 +11,7 @@ import ApiGames from './Games/ApiGames'
 import Search from './Search/Search'
 import BackGameInfo from './BackGameInfo/BackGameInfo'
 import FormCreate from './CRUD/create'
+import FormUpdate from './CRUD/update'
 
 
 
@@ -35,7 +36,8 @@ function App() {
         <Route path="/detailgame/:id" element={<Game />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/MoreGames" element={<BackGameInfo />} />
-        <Route path="/create" element={<FormCreate />} />
+        <Route path="/MoreGames/create" element={<FormCreate />} />
+        <Route path='/MoreGames/update' element={< FormUpdate />} />
       </Routes>
     </Router>
 

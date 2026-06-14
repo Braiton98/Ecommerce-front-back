@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthContext/AuthContext';
 import './Login.css';
 
 function LoginPage() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('');
+  const { loginSuccess } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ function LoginPage() {
     console.log(data);
 
     try {
-      const response = await fetch('http://localhost:3008/api/login', {
+      const response = await fetch('http://localhost:3001/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -28,6 +30,7 @@ function LoginPage() {
       });
 
       if (response.ok) {
+        loginSuccess();
         navigate('/games');
       } else {
         const errorData = await response.json();
@@ -45,7 +48,7 @@ function LoginPage() {
       <div className="log-container">
         <div className="login">
           <h2>Login</h2>
-          <form className="form_auth" onSubmit={handleSubmit} action='/'>
+          <form className="form_auth" onSubmit={handleSubmit}>
             <input
               placeholder="email"
               type="email"

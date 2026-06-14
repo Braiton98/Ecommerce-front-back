@@ -1,5 +1,5 @@
 import User from '../models/user-model.js'
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { createAccessToken } from "../libs/jwt.js";
 
 export const register = async (req, res) => {
@@ -27,6 +27,14 @@ export const register = async (req, res) => {
             updatedAt: userSaved.updatedAt
         });
     } catch (error) {
+        console.error(error);
+
+        // El código 11000 es el que usa Mongo para campos únicos duplicados
+        if (error.code === 11000) {
+            return res.status(400).json({
+                message: "Ya existe una cuenta con este correo electrónico."
+            });
+        }
         res.status(500).json({ message: error.message })
     }
 };
@@ -62,22 +70,22 @@ export const login = async (req, res) => {
 };
 
 
-export  const logout = (req, res) => {
-res.cookie('token', "",{
-    expires:new Date(0)
-})
-return res.sendStatus(200)
+export const logout = (req, res) => {
+    res.cookie('token', "", {
+        expires: new Date(0)
+    })
+    return res.sendStatus(200)
 }
 
 export const profile = async (req, res) => {
-const userFound = await User.findById(req.user.id)
-if(!userFound) return res.status(400).json({ message: "User not found" })
+    const userFound = await User.findById(req.user.id)
+    if (!userFound) return res.status(400).json({ message: "User not found" })
 
-return res.json({
-    id:userFound.id,
-    username:userFound.username,
-    email:userFound.email,
-    createdAt:userFound.createdAt,
-    updatedAt:userFound.updatedAt
-})
+    return res.json({
+        id: userFound.id,
+        username: userFound.username,
+        email: userFound.email,
+        createdAt: userFound.createdAt,
+        updatedAt: userFound.updatedAt
+    })
 }

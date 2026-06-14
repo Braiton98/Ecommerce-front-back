@@ -1,19 +1,24 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Logout() {
+  const navigate = useNavigate();
 
   const handleToken = async () => {
     try {
       const response = await axios({
-        url: `http://localhost:3008/api/logout`,
-        method: "POST"
+        url: `http://localhost:3001/api/logout`,
+        method: "POST",
+        withCredentials: true
       });
 
-      if (response.ok) {
-        console.log("Logout")
+      if (response.status === 200) {
+        console.log("Logout exitoso.");
+        navigate("/");
+        
       }
     } catch (error) {
-      console.error(error)
+      console.error("Error al intentar salir:",error)
     }
   }
   

@@ -8,6 +8,7 @@ function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -21,7 +22,7 @@ function Register() {
     console.log(data);
 
     try {
-      const response = await fetch('http://localhost:3008/api/register', {
+      const response = await fetch('http://localhost:3001/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -79,6 +80,7 @@ function Register() {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
+          {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
           <button type="submit" >create user</button>
         </form>
       </div>

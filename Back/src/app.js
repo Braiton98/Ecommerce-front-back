@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import { dirname, join } from 'path'; 
 import authRoutes from './routes/auth-routes.js';
 import gamesRoutes from "./routes/games-routes.js";
+import cors from 'cors';
 
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = dirname(__filename);
@@ -21,6 +22,11 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 });
+
+app.use(cors({
+  origin: 'http://localhost:5173', // La URL exacta de tu frontend en React
+  credentials: true                // Le permite al back leer y escribir las cookies
+}));
 
 
 app.get('/', (req, res) => {

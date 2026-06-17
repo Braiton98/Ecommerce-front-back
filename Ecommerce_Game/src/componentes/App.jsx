@@ -32,7 +32,6 @@ function App() {
 function AppContent() {
   const location = useLocation();
   const shouldShowHeader = !["/", "/register"].includes(location.pathname);
-  // Borrás los useState locales y ponés esto:
   const { isAuthenticated, isLoading } = useAuth();
 
   return (

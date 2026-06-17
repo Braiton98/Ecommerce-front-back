@@ -16,8 +16,8 @@ const BackGameInfo = () => {
   const fetchData = async (letter) => {
     try {
       const url = letter
-        ? `http://localhost:3008/api/letter?name=${letter}`
-        : 'http://localhost:3008/api/games';
+        ? `${import.meta.env.VITE_API_URL}/api/letter?name=${letter}`
+        : `${import.meta.env.VITE_API_URL}/api/games`;
 
       const response = await fetch(url);
       if (!response.ok) {

@@ -7,7 +7,7 @@ function Logout() {
   const handleToken = async () => {
     try {
       const response = await axios({
-        url: `http://localhost:3001/api/logout`,
+        url: `${import.meta.env.VITE_API_URL}/api/logout`,
         method: "POST",
         withCredentials: true
       });

@@ -26,6 +26,7 @@ function LoginPage() {
         headers: {
             'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify( data ),
       });
 
@@ -37,7 +38,7 @@ function LoginPage() {
         setError(errorData.message);
       }
     } catch (error) {
-      setError('An error occurred during login. Please try again later.');
+      setError('Ha ocurrido un error, por favor intente nuevamente más tarde.');
     }
   };
 

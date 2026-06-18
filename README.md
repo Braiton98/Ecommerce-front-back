@@ -2,6 +2,8 @@
 
 Este proyecto es un sistema de E-commerce desarrollado para la venta de videojuegos. Utiliza MongoDB como base de datos y proporciona funcionalidades clave como autenticación (login y register) y operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar los datos de los videojuegos.
 
+- La versión web la encuentras aquí: https://games-project-b.netlify.app/
+
 ## Características
 
 - **Base de Datos MongoDB:** Utiliza MongoDB para almacenar y gestionar los datos relacionados con los videojuegos.
@@ -25,8 +27,8 @@ Este proyecto es un sistema de E-commerce desarrollado para la venta de videojue
 
 ## Instalación
 
-1. Clona el repositorio: `git clone https://github.com/tu-usuario/tu-proyecto.git`
-2. Ingresa al directorio del proyecto: `cd tu-proyecto`
+1. Clona el repositorio: `git clone https://github.com/Braiton98/Ecommerce-front-back`
+2. Ingresa al directorio del proyecto: `cd ecommerce_game` || lo mismo para el back: `cd back`
 3. Instala las dependencias: `npm install`
 4. Configura la base de datos MongoDB con las credenciales y la URL de conexión necesarias.
 
@@ -38,7 +40,7 @@ Este proyecto es un sistema de E-commerce desarrollado para la venta de videojue
 
 ## Proyecto Integrador UTN + Fundación Empujar
 
-Este proyecto forma parte del proyector integrado de la UTN en colaboración con la Fundación Empujar.
+Este proyecto forma parte del proyecto integrador de la UTN en colaboración con la Fundación Empujar.
 
 ## Contribuciones
 

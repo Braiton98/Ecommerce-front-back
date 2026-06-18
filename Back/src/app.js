@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-  origin: 'https://tu-link-de-netlify.netlify.app', // La URL exacta de tu frontend en React
+  origin: 'https://games-project-b.netlify.app', // La URL exacta de tu frontend en React
   credentials: true                // Le permite al back leer y escribir las cookies
 }));
 

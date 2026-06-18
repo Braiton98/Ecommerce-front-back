@@ -55,7 +55,12 @@ export const login = async (req, res) => {
 
         const token = await createAccessToken({ id: userFound.id });
 
-        res.cookie('token', token);
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: true, // Le dice al navegador que solo viaje por conexiones seguras (HTTPS)
+            sameSite: 'none' // Permite que la cookie viaje desde Netlify hacia Render
+        });
+        
         res.json({
             message: "El usuario accedio correctamente",
             id: userFound.id,

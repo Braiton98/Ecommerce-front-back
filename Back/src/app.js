@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-  origin: 'http://localhost:5173', // La URL exacta de tu frontend en React
+  origin: 'https://tu-link-de-netlify.netlify.app', // La URL exacta de tu frontend en React
   credentials: true                // Le permite al back leer y escribir las cookies
 }));
 
